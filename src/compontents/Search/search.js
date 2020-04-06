@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import * as actions from "../../store/actions/actions";
+import classes from "./search.module.css";
 
 const Search = () => {
 
@@ -23,17 +24,18 @@ const Search = () => {
 //      e.preventDefault();
 //   }
   return (
-    <>
-      <div>MARVEL</div>
+    
+      <div className = {classes.inputSearch}>
       <form>
         <input
           onChange={searchEvent}
           type="text"
           value={stateSearchParam}
+          placeholder="Find your superhero..."
         ></input>
-        <input type="submit"></input>
       </form>
-    </>
+      </div>
+    
   );
 };
 

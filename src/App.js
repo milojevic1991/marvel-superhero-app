@@ -2,9 +2,11 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import api from './Api/api';
-
+import Logo from './compontents/UI/Logo/logo';
 
 import Search from './compontents/Search/search';
+
+import HeroResults from './compontents/HeroResults/heroResults';
 
 function App() {
   
@@ -37,7 +39,10 @@ function App() {
 
   return (
     <div className="App">
+
+      <Logo/>
       <Search/>
+      <HeroResults/>
     </div>
   );
 }

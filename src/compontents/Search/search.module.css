@@ -1,0 +1,22 @@
+.inputSearch{
+   width: 60%;
+   margin: 0 auto;
+   padding: 2rem;
+}
+.inputSearch form input{
+   width: 70%;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    background: #ffffffdb;
+    border: none;
+    box-shadow: 0 0px 70px #b00d0d9c, inset 0 0px 12px #14141485;
+}
+
+::placeholder {
+   color: rgb(37, 37, 37);
+   font-family: 'Marvel', sans-serif;
+   font-size: 18px;
+ font-style: italic;
+ font-weight: 400;
+
+ }

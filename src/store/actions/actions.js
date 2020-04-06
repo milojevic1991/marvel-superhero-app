@@ -31,9 +31,10 @@ export const fetchData = (searchParam) => {
       }
       else{
       const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${inputName}&apikey=${publicKey}&hash=${hash}`
-
+            console.log('url fetch',url);
          axios.get(url)
          .then((response) => {
+            console.log('response',response);
            dispatch(fetchSuccess(response.data.data.results));
           })
           .catch(error =>{

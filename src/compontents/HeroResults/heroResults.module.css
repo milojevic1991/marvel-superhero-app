@@ -1,0 +1,10 @@
+.heroResultsWrapper{
+   display: flex;
+   flex-direction: row;
+   width: 80%;
+   margin: 0 auto;
+   position: relative;
+   padding: 2rem;
+   flex-flow: row wrap;
+   justify-content: flex-start;
+}

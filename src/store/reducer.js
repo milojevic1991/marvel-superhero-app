@@ -2,7 +2,8 @@ import * as actionType from './actions/actionType';
 
 const initialState = {
    searchParam:'',
-   marvelCharData:[]
+   marvelCharData:[],
+   loading:false
 
 }
 
@@ -19,19 +20,43 @@ export const reducer = (state= initialState,action) => {
 
       case actionType.FETCH_DATA:
 
-      console.log('pocelo fetchovanje');
+      
       return{
-         ...state
+         ...state,
+         loading:true
       }
+
+      case actionType.FETCH_START:
+         return{
+            ...state,
+            loading:true
+         }
+      
+      return{
+         ...state,
+         loading:true
+      }
+
 
       case actionType.FETCH_SUCCESS:
 
-         const updatedData = Object.values(action.payload);
+         const updatedData = Object.values(action.payload).filter((item) => {
+            
+            if(item['description']){
+               console.log('da vidimo jel prazan',item['description'].length);
+               return true;
+            } else return false;
+         });
+         console.log('updatedData',updatedData);
+         // console.log(updatedData);
          return{
             ...state,
-
+        
             //MORA DA IZBRISE STARI ARRAY I VRATI NOVI
-            marvelCharData: updatedData
+            marvelCharData: updatedData,
+            loading:false
+
+
          }
 
          case actionType.FETCH_ERROR:
@@ -40,6 +65,7 @@ export const reducer = (state= initialState,action) => {
          
          return{
             ...state,
+            loading:false
             // //MORA DA IZBRISE STARI ARRAY I VRATI NOVI
             // marvelCharData: state.marvelCharData.filter(action.payload)
          }
@@ -50,7 +76,8 @@ export const reducer = (state= initialState,action) => {
             console.log('empty aray');
             return{
                ...state,
-               marvelCharData:emptyArr
+               marvelCharData:emptyArr,
+               loading:false
               
             }
                

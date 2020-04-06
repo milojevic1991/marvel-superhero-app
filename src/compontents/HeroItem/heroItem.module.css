@@ -1,0 +1,60 @@
+.heroItemWrapper{
+   width: 400px;
+   margin: 3rem;
+   padding: 11px;
+   box-sizing: border-box;
+   background: url('../../assets/Images/ItemComicBackground.jpg') top no-repeat;
+   box-shadow: 0 0 30px #ff000061;
+   border-radius: 10px;
+   
+
+
+}
+
+
+.heroItemContent {
+   background: #000000ed;
+   color: white;
+   box-shadow: 0 0 10px black;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.heroItemContent img{
+   width: 100%;
+   object-fit: fill;
+   height: 360px;
+}
+
+.heroItemContent h1{
+   font-weight: bold;
+
+}
+
+.heroItemContent p{
+   padding: 0 10px;
+   color: #a6a6a6;
+
+}
+
+.heroItemContent a{
+   padding: 10px 15px;
+   cursor: pointer;
+   text-decoration: none;
+   width: 20%;
+   margin: 8px auto;
+   margin-bottom: 20px;
+   background: linear-gradient(90deg, #c70006 0%, #9b0202 100%);
+   color: #fff;
+   border-radius: 1px;
+   box-shadow: 0 0 15px #f80002bf;
+   
+
+}
+
+
+
+
+
+
