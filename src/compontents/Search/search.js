@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React , {useEffect}from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,6 +10,8 @@ const Search = () => {
 
   const stateSearchParam = useSelector((state) => state.searchParam);
   const dispatch = useDispatch();
+  
+
 
   const searchEvent = (e) => {
     const param = e.target.value;
@@ -18,11 +20,6 @@ const Search = () => {
   };
 
 
-//   const sumbit = (e) => {
-
-//    dispatch(actions.fetchData());
-//      e.preventDefault();
-//   }
   return (
     
       <div className = {classes.inputSearch}>

@@ -1,4 +1,6 @@
 export const SEARCH_INPUT = "SEARCH_INPUT";
+export const READ_MORE_BTN_HANDLER = "READ_MORE_BTN_HANDLER";
+
 export const FETCH_EMPTY_STATE   = 'FETCH_EMPTY_STATE';
 
 //Fetch

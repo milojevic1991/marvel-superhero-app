@@ -49,7 +49,15 @@
    color: #fff;
    border-radius: 1px;
    box-shadow: 0 0 15px #f80002bf;
-   
+     
+   transition: 0.2s all
+
+}
+
+.heroItemContent a:hover{
+  
+   background: linear-gradient(180deg, #c70006 0%, #9b0202 100%);
+ ;
 
 }
 

@@ -3,7 +3,9 @@ import * as actionType from './actions/actionType';
 const initialState = {
    searchParam:'',
    marvelCharData:[],
-   loading:false
+   marvelSingleHero:[],
+   loading:false,
+   inputLength:''
 
 }
 
@@ -43,18 +45,16 @@ export const reducer = (state= initialState,action) => {
          const updatedData = Object.values(action.payload).filter((item) => {
             
             if(item['description']){
-               console.log('da vidimo jel prazan',item['description'].length);
                return true;
             } else return false;
          });
-         console.log('updatedData',updatedData);
-         // console.log(updatedData);
          return{
             ...state,
         
             //MORA DA IZBRISE STARI ARRAY I VRATI NOVI
             marvelCharData: updatedData,
-            loading:false
+            loading:false,
+            inputLength:action.inputLength
 
 
          }
@@ -80,8 +80,40 @@ export const reducer = (state= initialState,action) => {
                loading:false
               
             }
-               
+
+            case actionType.READ_MORE_BTN_HANDLER:
+
+
+
+            const updatedArr = state.marvelCharData.filter((el) => {
+               return el.id ==action.payload}).map(el =>{
+
+                  return {
+                     id:el.id,
+                     name:el.name,
+                     description:el.description,
+                     thumbnail: el.thumbnail.path,
+                     comics:el.comics.available,
+                     series:el.stories.available,
+                     stories:el.stories.available,
+                     urls:el.urls.map(urls => urls.url)
+
+
+
+
+
+
+                  }
+               })
+
             
+
+            return{
+               ...state,
+               marvelSingleHero:updatedArr
+            }
+            
+          
          
    
       default:

@@ -34,8 +34,8 @@ export const fetchData = (searchParam) => {
             console.log('url fetch',url);
          axios.get(url)
          .then((response) => {
-            console.log('response',response);
-           dispatch(fetchSuccess(response.data.data.results));
+            // console.log('response',response);
+           dispatch(fetchSuccess(response.data.data.results,inputName));
           })
           .catch(error =>{
                dispatch(fetchError(error));
@@ -53,12 +53,13 @@ export const fetchData = (searchParam) => {
    }
 }
 
-export const fetchSuccess = (data) => {
+export const fetchSuccess = (data,inputLength) => {
    return{
       type:actionType.FETCH_SUCCESS,
       payload: {
          ...data
-      }
+      },
+      inputLength:inputLength
    }
 }
 
@@ -86,6 +87,15 @@ export const fetchError = (error) => {
    return{
       type:actionType.FETCH_EMPTY_STATE,
      
+   }
+    
+ }
+
+ export const readMoreBtnHandler = (id) => {
+
+   return{
+      type:actionType.READ_MORE_BTN_HANDLER,
+     payload:id
    }
     
  }

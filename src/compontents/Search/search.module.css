@@ -9,7 +9,26 @@
     border-radius: 8px;
     background: #ffffffdb;
     border: none;
+    transition: 0.2 all;
     box-shadow: 0 0px 70px #b00d0d9c, inset 0 0px 12px #14141485;
+}
+
+input:focus{
+   
+    outline: none;
+    box-shadow: 0 0px 70px #b00d0d9c, inset 0 0px 12px #b20000eb !important;
+    transition: 0.2 all;
+   
+}
+
+input[type="text"]
+{
+   color:#6a0001;
+   font-family: 'Marvel', sans-serif;
+   font-size: 23px;
+ /* font-style: italic; */
+ font-weight: 700;
+ transition: 0.2 all;
 }
 
 ::placeholder {
