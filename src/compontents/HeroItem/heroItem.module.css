@@ -1,68 +1,67 @@
-.heroItemWrapper{
-   width: 400px;
-   margin: 3rem;
-   padding: 11px;
-   box-sizing: border-box;
-   background: url('../../assets/Images/ItemComicBackground.jpg') top no-repeat;
-   box-shadow: 0 0 30px #ff000061;
-   border-radius: 10px;
-   
-
-
+.heroItemWrapper {
+  width: 400px;
+  margin: 3rem;
+  padding: 11px;
+  box-sizing: border-box;
+  background: url("../../assets/Images/ItemComicBackground.jpg") top no-repeat;
+  box-shadow: 0 0 30px #ff000061;
+  border-radius: 10px;
 }
-
 
 .heroItemContent {
-   background: #000000ed;
-   color: white;
-   box-shadow: 0 0 10px black;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
+  background: #000000ed;
+  color: white;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
-.heroItemContent img{
-   width: 100%;
-   object-fit: fill;
-   height: 360px;
+.heroItemContent img {
+  width: 100%;
+  object-fit: fill;
+  height: 360px;
 }
 
-.heroItemContent h1{
-   font-weight: bold;
-
+.heroItemContent h1 {
+  font-weight: bold;
 }
 
-.heroItemContent p{
-   padding: 0 10px;
-   color: #a6a6a6;
-
+.heroItemContent p {
+  padding: 0 10px;
+  color: #a6a6a6;
+  margin-bottom: 60px;
 }
 
-.heroItemContent a{
-   padding: 10px 15px;
-   cursor: pointer;
-   text-decoration: none;
-   width: 20%;
-   margin: 8px auto;
-   margin-bottom: 20px;
-   background: linear-gradient(90deg, #c70006 0%, #9b0202 100%);
-   color: #fff;
-   border-radius: 1px;
-   box-shadow: 0 0 15px #f80002bf;
-     
-   transition: 0.2s all
-
+.heroItemContent a {
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 20%;
+  margin: 8px auto;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #c70006 0%, #9b0202 100%);
+  color: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 15px #f80002bf;
+  transition: 0.2s all;
+  position: absolute;
+  bottom: 0px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 2px 2px 5px 5px;
 }
 
-.heroItemContent a:hover{
-  
-   background: linear-gradient(180deg, #c70006 0%, #9b0202 100%);
- ;
-
+.heroItemContent a:hover {
+  background: linear-gradient(180deg, #c70006 0%, #9b0202 100%);
 }
 
-
-
-
-
-
+@media (max-width: 760px) {
+  .heroItemWrapper {
+    margin: 25px;
+    font-size: 19px;
+  }
+}
