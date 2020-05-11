@@ -5,7 +5,7 @@
 Marvel Superhero Search
 </h1>
 <p align="center">
-  #c30f14
+You don't know the height of Ant-Man or  RGB of Hulks green skin? This is an app for you then. Marvel Superhero Search App in greatest form.
 </p>
 
 ![demo](https://i.ibb.co/ZGY9SZS/Marvel-App.png)
